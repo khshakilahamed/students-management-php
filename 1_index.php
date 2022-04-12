@@ -56,30 +56,29 @@
                             <tbody>
                                 <?php 
                                     while($row = mysqli_fetch_assoc($result)){ ?>
-                                    <tr>
-                                        <td><?php echo $row['id'] ?></td>
-                                        <td><?php echo $row['student_id'] ?></td>
-                                        <td><?php echo $row['name'] ?></td>
-                                        <td><?php echo $row['email'] ?></td>
-                                        <td>
-                                            <a href="">
-                                                <button class="btn-details" title="Details">
-                                                    <img width="20" height="20" src="./images/list.png" alt="">
-                                                </button>
-                                            </a>
-                                            <a href="">
-                                                <button class="btn-edit" title="Edit">
-                                                    <img width="20" height="20" src="./images/editing.png" alt="">
-                                                </button>
-                                            </a>
-                                            <a href="">
-                                                <button class="btn-delete" title="Delete">
-                                                    <img width="20" height="20" src="./images/bin.png" alt="">
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
-
+                                        <tr>
+                                            <td><?php echo $row['id'] ?></td>
+                                            <td><?php echo $row['student_id'] ?></td>
+                                            <td><?php echo $row['name'] ?></td>
+                                            <td><?php echo $row['email'] ?></td>
+                                            <td>
+                                                <a href="./4_show_details.php?id=<?php echo $row['student_id']?>">
+                                                    <button class="btn-details" title="Details">
+                                                        <img width="20" height="20" src="./images/list.png" alt="">
+                                                    </button>
+                                                </a>
+                                                <a href="">
+                                                    <button class="btn-edit" title="Edit">
+                                                        <img width="20" height="20" src="./images/editing.png" alt="">
+                                                    </button>
+                                                </a>
+                                                <a href="">
+                                                    <button class="btn-delete" title="Delete">
+                                                        <img width="20" height="20" src="./images/bin.png" alt="">
+                                                    </button>
+                                                </a>
+                                            </td>
+                                        </tr>
                                     <?php }
                                 ?>
                             </tbody>

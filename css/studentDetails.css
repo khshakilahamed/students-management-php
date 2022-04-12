@@ -1,0 +1,22 @@
+.student-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.student-details img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.student-details p{
+    line-height: 12px;
+}
+
+.student-name{
+    font-size: 25px;
+    font-weight: 800;
+}

@@ -16,7 +16,7 @@
     $sql = "INSERT INTO students VALUES(null, '$student_id', '$name', '$email', '$semester', '$imageLink', '$department', '$section', '$phone', '$address');";
 
     if(mysqli_query($conn, $sql)){
-        echo "Inserted";
+        header("Location: 1_index.php");
     }
 
     // echo $name, $email, $semester, $imageLink, $department, $section, $phone, $address;
