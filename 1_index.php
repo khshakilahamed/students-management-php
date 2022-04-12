@@ -2,6 +2,7 @@
     $conn = mysqli_connect('localhost', 'root', '', 'studentmanagement');
     $sql = "SELECT * FROM students";
     $result = mysqli_query($conn, $sql); 
+    $i= 0;
 ?>
 
 <!DOCTYPE html>
@@ -55,9 +56,9 @@
                             </thead>
                             <tbody>
                                 <?php 
-                                    while($row = mysqli_fetch_assoc($result)){ ?>
+                                    while($row = mysqli_fetch_assoc($result)){ $i++; ?>
                                         <tr>
-                                            <td><?php echo $row['id'] ?></td>
+                                            <td><?php echo $i ?></td>
                                             <td><?php echo $row['student_id'] ?></td>
                                             <td><?php echo $row['name'] ?></td>
                                             <td><?php echo $row['email'] ?></td>
@@ -72,7 +73,7 @@
                                                         <img width="20" height="20" src="./images/editing.png" alt="">
                                                     </button>
                                                 </a>
-                                                <a href="">
+                                                <a onclick="return confirm('Are you sure?')" href="./7_delete-student.php?id=<?php echo $row['student_id']?>">
                                                     <button class="btn-delete" title="Delete">
                                                         <img width="20" height="20" src="./images/bin.png" alt="">
                                                     </button>
