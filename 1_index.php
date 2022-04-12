@@ -67,7 +67,7 @@
                                                         <img width="20" height="20" src="./images/list.png" alt="">
                                                     </button>
                                                 </a>
-                                                <a href="">
+                                                <a href="./5_edit_student_info.php?id=<?php echo $row['student_id']?>">
                                                     <button class="btn-edit" title="Edit">
                                                         <img width="20" height="20" src="./images/editing.png" alt="">
                                                     </button>

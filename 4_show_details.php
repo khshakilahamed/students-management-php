@@ -58,6 +58,10 @@
                             <p>Department: <?php echo $row['department'] ?></p>
                             <p>Contact Number: <?php echo $row['phone'] ?></p>
                             <p>Address: <?php echo $row['address'] ?></p>
+                            
+                            <a href="./1_index.php">
+                                <button class="btn">Back</button>
+                            </a>
                         </div>
                     </div>
                 </div>
