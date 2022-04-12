@@ -20,7 +20,7 @@ header{
     margin: 20px;
 }
 
-button{
+.btn{
     color: #232946;
     background-color: #eebbc3;
     outline: none;
@@ -31,10 +31,43 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.btn:hover{
     /* color: #232946; */
     background-color: #fffffe;
 }
+
+.btn-details{
+    color: white;
+    background-color: #7cdf6b;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit{
+    color: white;
+    background-color: #66c3e4;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-delete{
+    color: white;
+    background-color: #e46666;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .main-content{
     padding: 20px 0;
     display: grid;
@@ -51,3 +84,27 @@ button:hover{
     justify-content:space-between; 
     align-items:center
 }
+
+.table-container{
+    display: flex;
+}
+.table-container table{
+    width: 100%;
+    justify-content: center;
+    /* align-content: center; */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    /* background-color: ; */
+  }
