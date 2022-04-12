@@ -4,10 +4,12 @@
         header("Location: 8_signin.php");
     }
 
+    $uniqueKey=$_GET['uniqueKey'];
+
     $email = $_SESSION['my_email'];
 
     $conn = mysqli_connect('localhost', 'root', '', 'studentmanagement');
-    $sql = "SELECT * FROM users WHERE email='$email';";
+    $sql = "SELECT * FROM users WHERE uniqueKey='$uniqueKey';";
     $result = mysqli_query($conn, $sql); 
     $row = mysqli_fetch_assoc($result);
 ?>
@@ -29,7 +31,7 @@
 
     <!-- custom css  -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/my-profile.css">
+    <link rel="stylesheet" href="css/update-password.css">
 
     <title>Document</title>
 </head>
@@ -68,31 +70,31 @@
                     </div>
                     <hr>
                     <div class="myProfile-container">
-                        <?php 
-                            if(isset($_SESSION['update_password_msg'])) {?>
-                                <p class="update_password_msg"><?php echo $_SESSION['update_password_msg']; ?></p>
-                        
-                        <?php
-                        }
-                        ?>
                         <img src="<?php echo $row['imageLink'] ?>" alt="">
                         <p>Name: <?php echo $row['name'] ?></p>
                         <p>Unique Key: <?php echo $row['uniqueKey'] ?></p>
                         <p>Email: <?php echo $row['email'] ?></p>
-                        <p>
-                            Password: 
-                            <input class="password-field" type="password" value="<?php echo $row['password'] ?>" disabled> 
-                            <a class="password-update" href="./14_update-password.php?uniqueKey=<?php echo $row['uniqueKey']; ?>">update password</a>
-                        </p>
-
+                        <div>
+                            <form action="./15_confirm-update-password.php?uniqueKey=<?php echo $row['uniqueKey']; ?>" method="POST">
+                                Password: 
+                                <input class="password-field" type="password" id="password" name="password" value="<?php echo $row['password'] ?>"> 
+                                <br>
+                                <input type="checkbox" name="" id="checkbox"> <label for="checkbox"><small>show password</small></label>
+                                <br>
+                                <input class="btn" type="submit" value="Save">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+        $('#checkbox').click(()=>{
+            $('#password').attr('type', $('#checkbox').is(':checked') ? 'text':'password');
+        });
+    </script>
 </body>
 </html>
-
-<?php 
-    unset($_SESSION['update_password_msg']);
-?>

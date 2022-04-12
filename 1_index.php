@@ -38,6 +38,7 @@
         <section>
             <div class="main-content">
                 <div>
+                    
                     <div>
                         <a href="./2_addStudent.php">
                             <button class="btn">New Student</button>

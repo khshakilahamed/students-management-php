@@ -34,9 +34,17 @@
         <section>
             <div class="main-content">
                 <div>
-                    <a href="./1_index.php">
-                        <button class="btn">Student List</button>
-                    </a>
+                    <div>
+                        <a href="./1_index.php">
+                            <button class="btn">Student List</button>
+                        </a>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="./13_my-profile.php">
+                            <button class="btn">My Profile</button>
+                        </a>
+                    </div>
                 </div>
                 <div class="studentContainer">
                     <?php 

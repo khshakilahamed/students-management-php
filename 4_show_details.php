@@ -40,9 +40,17 @@
         <section>
             <div class="main-content">
                 <div>
-                    <a href="./2_addStudent.php">
-                        <button class="btn">New Student</button>
-                    </a>
+                    <div>
+                        <a href="./2_addStudent.php">
+                            <button class="btn">New Student</button>
+                        </a>
+                    </div>
+                    <br>
+                    <div>
+                        <a href="./13_my-profile.php">
+                            <button class="btn">My Profile</button>
+                        </a>
+                    </div>
                 </div>
                 <div class="studentContainer">
                     <div class="logoutContainer">

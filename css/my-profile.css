@@ -1,0 +1,14 @@
+.myProfile-container img{
+    width: 200px;
+    height: 200px;
+    object-fit:fill;
+}
+.password-field{
+    width: 50px;
+}
+.password-update{
+    color: aqua;
+}
+.update_password_msg{
+    color: green;
+}

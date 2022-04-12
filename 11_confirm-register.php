@@ -3,6 +3,7 @@
 
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $imageLink = $_POST['image'];
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
 
@@ -27,7 +28,7 @@
             header("Location: 8_signin.php");
         }
         else{
-            $sql2 = "INSERT INTO users VALUES(null, '$name', '$email', '$password','$uniqueKey');";
+            $sql2 = "INSERT INTO users VALUES(null, '$name', '$email', '$imageLink', '$password','$uniqueKey');";
 
             if(mysqli_query($conn, $sql2)){
                 $_SESSION['signup_msg'] = "Successfully created account. Please login here";

@@ -36,6 +36,9 @@
             <label for="email" class="label">Email: </label>
             <input type="email" class="input" name="email" id="email" placeholder="Email" required>
 
+            <label for="image" class="label">Image URL: </label>
+            <input type="text" class="input" name="image" id="image" placeholder="Image URL" required>
+
             <label for="password" class="label">Password: </label>
             <input type="password" class="input" name="password" id="password" placeholder="Password" required>
 
