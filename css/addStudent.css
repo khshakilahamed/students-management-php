@@ -1,0 +1,19 @@
+.student-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.student-form label{
+    /* font-size: 20px; */
+}
+.student-form input, .student-form  textarea{
+    width: 98%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    border: 1px solid white;
+    color: #b8c1ec;
+}

@@ -1,0 +1,53 @@
+body{
+    background-color: #232946;
+    color: #b8c1ec;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #fffffe;
+    margin: 0;
+}
+
+main{
+    padding: 0 200px;
+    
+}
+
+header{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+button{
+    color: #232946;
+    background-color: #eebbc3;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    /* color: #232946; */
+    background-color: #fffffe;
+}
+.main-content{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.studentContainer{
+    padding-left: 20px;
+    border-left: 1px solid white;
+}
+
+.logoutContainer{
+    display: flex; 
+    justify-content:space-between; 
+    align-items:center
+}
