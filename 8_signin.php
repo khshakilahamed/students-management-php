@@ -1,7 +1,5 @@
 <?php 
-    $conn = mysqli_connect('localhost', 'root', '', 'studentmanagement');
-    $sql = "SELECT * FROM students";
-    $result = mysqli_query($conn, $sql); 
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +25,21 @@
 </head>
 <body>
     <div class="signIn-container">
-        <form action="" class="signIn-form-container">
+        <form action="./9_signin-confirm.php" method="POST" class="signIn-form-container">
             <h2>Sign in</h2>
 
+            <?php 
+                if(isset($_SESSION['signin_error'])) { ?>
+                    <p class="signin_error">Wrong Email or Password</p>
+                <?php
+                }
+            ?>
+            <?php 
+                if(isset($_SESSION['signup_msg'])) { ?>
+                    <p class="signup_msg"><?php echo $_SESSION['signup_msg'];?></p>
+                <?php
+                }
+            ?>
             <label for="email" class="label">Email: </label>
             <input type="email" class="input" name="email" id="email" placeholder="Email" required>
 
@@ -55,3 +65,8 @@
     </script>
 </body>
 </html>
+
+<?php 
+    unset($_SESSION['signin_error']);
+    unset($_SESSION['signup_msg']);
+?>

@@ -1,4 +1,9 @@
 <?php 
+    session_start();
+    if(!isset($_SESSION['signin-success'])){
+        header("Location: 8_signin.php");
+    }
+
     $student_id = $_GET['id'];
     $conn = mysqli_connect('localhost', 'root', '', 'studentmanagement');
     $sql = "SELECT * FROM students WHERE student_id='$student_id'";
@@ -44,7 +49,7 @@
                 <div class="studentContainer">
                     <div class="logoutContainer">
                         <h2>Edit Student Info</h2>
-                        <a href="">
+                        <a href="./12_logout.php">
                             <button class="btn">Logout</button>
                         </a>
                     </div>

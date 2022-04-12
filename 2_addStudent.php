@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if(!isset($_SESSION['signin-success'])){
+        header("Location: 8_signin.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +39,15 @@
                     </a>
                 </div>
                 <div class="studentContainer">
+                    <?php 
+                        if(isset($_SESSION['insert_error'])) { ?>
+                            <p class="insert_error"><?php echo "Something wrong. Please, try again." ?></p>
+
+                       <?php }
+                    ?>
                     <div class="logoutContainer">
                         <h2>Add a Student</h2>
-                        <a href="">
+                        <a href="./12_logout.php">
                             <button class="btn">Logout</button>
                         </a>
                     </div>

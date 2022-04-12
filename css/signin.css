@@ -52,3 +52,13 @@ body{
 .login-link{
     color: aqua;
 }
+
+.signin_error{
+    color: red;
+    text-align: center;
+}
+
+.signup_msg{
+    color: green;
+    text-align: center;
+}

@@ -1,5 +1,9 @@
 <?php 
-
+    session_start();
+    if(!isset($_SESSION['signin-success'])){
+        header("Location: 8_signin.php");
+    }
+    
     $id = $_GET['id'];
 
     $student_id = $_POST['student_id'];
@@ -17,11 +21,12 @@
     $sql = "UPDATE students SET student_id='$student_id', name='$name', email='$email', semester='$semester', imageLink='$imageLink', department='$department', section='$section', phone='$phone', address='$address' WHERE id=$id;";
 
     if(mysqli_query($conn, $sql)){
+        $_SESSION['update_msg'] = "$name's info Successfully updated";
         header("Location: 1_index.php");
     }
 
     else{
-        
+
     }
 
     // echo $name, $email, $semester, $imageLink, $department, $section, $phone, $address;

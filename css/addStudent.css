@@ -17,3 +17,7 @@
     border: 1px solid white;
     color: #b8c1ec;
 }
+
+.insert_error{
+    color: red;
+}
